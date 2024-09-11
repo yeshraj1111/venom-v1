@@ -307,7 +307,7 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
-            if time > 600:
+            if time > 600000:
                 response = "Error: Time interval must be less than 600."
             else:
                 record_command_logs(user_id, '/bgmi', target, port, time)
@@ -395,7 +395,7 @@ def welcome_plan(message):
     response = f'''{user_name}, Brother Only 1 Plan Is Powerfull Then Any Other Ddos !!:
 
 Vip 🌟 :
--> Attack Time : 300 (S)
+-> Attack Time : 30000 (S)
 > After Attack Limit : 10 sec
 -> Concurrents Attack : 5
 
@@ -451,5 +451,3 @@ while True:
         bot.polling(none_stop=True)
     except Exception as e:
         print(e)
-
-
